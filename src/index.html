@@ -3,12 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Home work 11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Raleway:wght@700&family=Roboto:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
+    <script type="module" src="./js/scroll_to_top.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script>
+      (function () {
+        var scroll = new LocomotiveScroll();
+      })();
+    </script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        class="form-input"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button type="submit" class="form-btn">
+        <svg width="20px" height="20px">
+          <use href="./images/symbols.svg#icon-search"></use>
+        </svg>
+        <!-- Search -->
+      </button>
+    </form>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <button type="button" class="load-more load-more__hidden">Load more</button>
+    <p class="img-counter"></p>
+    <div className="scroll-to-top">
+      <button type="button" class="btn btn-style">
+        <svg>
+          <use href="./images/symbols.svg#scroll-to-up"></use>
+        </svg>
+      </button>
+    </div>
   </body>
 </html>
